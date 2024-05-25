@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var sliderPosition: ClosedRange<Int> = 14...140
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image("IconSearch")
+                .foregroundColor(.blue)
                 .imageScale(.large)
-                .foregroundStyle(.tint)
+                
             Text("Hello, world!")
+                .pokemonNumberStyle()
+                .foregroundColor(.typeBug)
+            
+            PokedexRangeSlider(currentValue: $sliderPosition, sliderBounds: 1...151)
+            //.titleStyle()
+            //.font(.title)
+            
         }
         .padding()
     }
