@@ -8,7 +8,3 @@
 import Apollo
 
 let apolloClient = ApolloClient(url: URL(string: "https://beta.pokeapi.co/graphql/v1beta")!)
-
-func callApi() -> Void {
-    apolloClient.fetch(query: PokeAPIQueries.getPokemonsByGeneration, )
-}

@@ -7,41 +7,27 @@
 
 import SwiftUI
 
-enum PokemonGeneration: String, CaseIterable, Identifiable {
-    case I = "I"
-    case II = "II"
-    case III = "III"
-    case IV = "IV"
-    case V = "V"
-    case VI = "VI"
-    case VII = "VII"
-    case VIII = "VIII"
-    
-    var id: PokemonGeneration { self }
-}
-
 struct GenerationButton: View {
     let generation: PokemonGeneration
     let isSelected: Bool
+    let changeGeneration: () -> Void
     
     var body: some View {
-        Button(action: {}) {
+        Button(action: changeGeneration) {
             ZStack {
-                GeometryReader { geometry in
-                    LinearGradient(
-                        colors: [
-                            isSelected ? .textWhite.opacity(0.3) : .vectorGray,
-                            isSelected ? .textWhite.opacity(0) : .vectorGray.opacity(0)
-                        ],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                    .mask {
-                        Image("Image6x3")
-                            .resizable()
-                            .frame(maxWidth: 80, maxHeight: 35)
-                            .position(x:55, y: 27.5)
-                    }
+                LinearGradient(
+                    colors: [
+                        isSelected ? .textWhite.opacity(0.3) : .vectorGray,
+                        isSelected ? .textWhite.opacity(0) : .vectorGray.opacity(0)
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .mask {
+                    Image("Image6x3")
+                        .resizable()
+                        .frame(maxWidth: 80, maxHeight: 35)
+                        .position(x:55, y: 27.5)
                 }
                 GeometryReader { geometry in
                     LinearGradient(
@@ -60,11 +46,11 @@ struct GenerationButton: View {
                     }
                 }
                 VStack {
-                    Image("\(generation.rawValue)Generation")
+                    Image("\(generation)Generation")
                         .resizable()
                         .frame(maxWidth: 125, maxHeight: 45)
                     
-                    Text("Generation \(generation.rawValue)")
+                    Text("Generation \(generation)")
                         .font(TextStyles.description)
                         .foregroundColor(isSelected ? .textWhite : .textGray)
                 }
@@ -73,7 +59,7 @@ struct GenerationButton: View {
                 .padding([.bottom], 20)
             }
         }
-        .frame(maxWidth: 160, maxHeight: 129)
+        .frame(maxHeight: 129)
         .background(isSelected ? .typePsychic : .backgroundDefaultInput)
         .cornerRadius(10)
         .shadow(
@@ -81,13 +67,14 @@ struct GenerationButton: View {
             radius: 20,
             y: 10
         )
-        
+        .animation(.easeIn, value: isSelected)
     }
 }
 
 #Preview {
     GenerationButton(
         generation: .II,
-        isSelected: true
+        isSelected: true,
+        changeGeneration: {}
     )
 }

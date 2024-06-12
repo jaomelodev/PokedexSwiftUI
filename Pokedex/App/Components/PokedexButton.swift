@@ -22,6 +22,7 @@ struct PokedexButton: View {
             Text(buttonLable)
                 .font(TextStyles.description)
                 .frame(maxWidth: .infinity, maxHeight: 60)
+                .frame(height: 60)
         }
         .background(
             disabled || !primaryButton ? .backgroundDefaultInput : .typePsychic
@@ -36,6 +37,7 @@ struct PokedexButton: View {
             y: 4
         )
         .disabled(disabled)
+        .animation(.easeIn, value: primaryButton)
     }
 }
 
@@ -43,7 +45,7 @@ struct PokedexButton: View {
     PokedexButton(
         buttonLable: "Selecionar",
         disabled: false,
-        primaryButton: false
+        primaryButton: true
     ) {
         print("Clicou")
     }

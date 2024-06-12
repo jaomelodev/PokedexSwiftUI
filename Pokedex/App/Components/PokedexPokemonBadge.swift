@@ -11,15 +11,18 @@ struct PokedexPokemonBadge: View {
     let pokemonType: PokemonType
     
     var color: Color { getPokemonColor(pokemonType) }
+    var typeName: String {
+        pokemonType.rawValue.capitalizingFirstLetter()
+    }
     
     var body: some View {
         HStack {
-            Image("Icon\(pokemonType.rawValue)")
+            Image("Icon\(typeName)")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 15, height: 15)
             
-            Text(pokemonType.rawValue)
+            Text(typeName)
                 .font(TextStyles.pokemonType)
         }
         .foregroundColor(.white)

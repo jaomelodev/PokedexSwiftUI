@@ -5,7 +5,11 @@
 //  Created by João Melo on 25/05/24.
 //
 
+import Apollo
+
 struct PokeAPIQueries {
+    let graphQLQuery = GraphQLQuery()
+    
     static let getPokemonsByGeneration = """
         query GetPokemonsByGeneration($generationId) {
           pokemon_v2_generation_by_pk(id: $generationId) {

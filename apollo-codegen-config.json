@@ -1,0 +1,44 @@
+{
+  "schemaNamespace" : "PokeAPI",
+  "input" : {
+    "operationSearchPaths" : [
+      "**/*.graphql"
+    ],
+    "schemaSearchPaths" : [
+      "**/*.graphqls"
+    ]
+  },
+  "schemaDownload": {
+      "downloadMethod": {
+          "introspection": {
+              "endpointURL": "https://beta.pokeapi.co/graphql/v1beta",
+              "httpMethod": {
+                  "POST": {}
+              },
+              "includeDeprecatedInputValues": false,
+              "outputFormat": "SDL"
+          }
+      },
+      "downloadTimeout": 60,
+      "headers": [],
+      "outputPath": "Pokedex/App/Network/GraphQL/schema.graphqls"
+  },
+  "output" : {
+    "testMocks" : {
+      "none" : {
+      }
+    },
+    "schemaTypes" : {
+      "path" : "./Pokedex/App/Network/GraphQL/PokeAPI",
+      "moduleType" : {
+        "embeddedInTarget" : {
+          "name" : "Pokedex"
+        }
+      }
+    },
+    "operations" : {
+      "inSchemaModule" : {
+      }
+    }
+  }
+}

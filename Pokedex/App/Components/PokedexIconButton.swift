@@ -14,7 +14,7 @@ struct PokedexIconButton: View {
     let action: () -> Void
     
     init(pokemonType: PokemonType, active: Bool, action: @escaping () -> Void) {
-        self.icon = "Icon\(pokemonType.rawValue)"
+        self.icon = "Icon\(pokemonType.rawValue.capitalizingFirstLetter())"
         self.color = getPokemonColor(pokemonType)
         self.active = active
         self.action = action
@@ -53,8 +53,8 @@ struct PokedexIconButton: View {
                 .cornerRadius(35)
                 .shadow(
                     color: color.opacity(active ? 0.3 : 0),
-                    radius: 20,
-                    y: 10
+                    radius: 10,
+                    y: 7
                 )
         }
     }
