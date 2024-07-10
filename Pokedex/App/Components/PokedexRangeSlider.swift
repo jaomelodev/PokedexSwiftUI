@@ -35,7 +35,7 @@ struct PokedexRangeSlider: View {
                 : CGFloat(currentValue.lowerBound - sliderBounds.lowerBound) * stepWidthInPixel
                 
                 //Calculate right thumb initial position
-                let rightThumbLocation = CGFloat(currentValue.upperBound) * stepWidthInPixel
+                let rightThumbLocation = CGFloat(currentValue.upperBound - sliderBounds.lowerBound) * stepWidthInPixel
                 
                 //Line between
                 lineBetweenThumbs(
@@ -66,7 +66,7 @@ struct PokedexRangeSlider: View {
                         let xThumbOffset = min(max(CGFloat(leftThumbLocation), dragLocation.x), sliderSize.width)
                         
                         var newValue = Int(xThumbOffset / stepWidthInPixel)
-                        newValue = min(newValue, sliderBounds.upperBound)
+                        newValue = min(newValue, sliderBounds.count) + sliderBounds.lowerBound
                         
                         if newValue > currentValue.lowerBound {
                             currentValue = currentValue.lowerBound...newValue
@@ -107,12 +107,12 @@ struct PokedexRangeSlider: View {
 
 #Preview {
     struct ContainderView: View {
-        @State var sliderPosition: ClosedRange<Int> = 10...144
+        @State var sliderPosition: ClosedRange<Int> = 152...252
         
         var body: some View {
             PokedexRangeSlider(
                 currentValue: $sliderPosition,
-                sliderBounds: 1...151
+                sliderBounds: 152...252
             )
             .padding()
         }

@@ -70,14 +70,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "90B9FDE4-2164-4F26-9322-708D16F22331"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pokedex/Pokemon/Data/DataSources/PokemonDataSourceImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "fetchPokemonByGeneration(generationId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -108,8 +108,8 @@
             filePath = "Pokedex/Pokemon/Data/DataSources/PokemonDataSourceImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "fetchPokemonByGeneration(generationId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -124,8 +124,8 @@
             filePath = "Pokedex/Pokemon/Data/DataSources/PokemonDataSourceImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "fetchPokemonByGeneration(generationId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -134,7 +134,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F0F471B4-775B-41B7-B35C-B80F5F7B74B5"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pokedex/Pokemon/Data/DataSources/PokemonDataSourceImpl.swift"
@@ -150,143 +150,39 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1281392E-4257-44E1-93DB-3B770D7DEAF4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pokedex/Home/Presentation/Controllers/HomeController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "getPokemonsByGeneration(generationId:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1281392E-4257-44E1-93DB-3B770D7DEAF4 - ba1c15da7f5860fb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Pokedex.HomeController.getPokemonsByGeneration(generationId: Swift.Int) async -&gt; ()"
-                  moduleName = "Pokedex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jao/www/swift/Pokedex/Pokedex/Home/Presentation/Controllers/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52">
-               </Location>
-               <Location
-                  uuid = "1281392E-4257-44E1-93DB-3B770D7DEAF4 - 4652b061b173cccc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for Pokedex.HomeController.getPokemonsByGeneration(generationId: Swift.Int) async -&gt; ()"
-                  moduleName = "Pokedex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jao/www/swift/Pokedex/Pokedex/Home/Presentation/Controllers/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52">
-               </Location>
-               <Location
-                  uuid = "1281392E-4257-44E1-93DB-3B770D7DEAF4 - 7727e7dfea813ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Pokedex.HomeController.getPokemonsByGeneration(generationId: Swift.Int) async -&gt; ()"
-                  moduleName = "Pokedex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jao/www/swift/Pokedex/Pokedex/Home/Presentation/Controllers/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52">
-               </Location>
-               <Location
-                  uuid = "1281392E-4257-44E1-93DB-3B770D7DEAF4 - d6b4c0dd9f9e9ee4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for Pokedex.HomeController.getPokemonsByGeneration(generationId: Swift.Int) async -&gt; ()"
-                  moduleName = "Pokedex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jao/www/swift/Pokedex/Pokedex/Home/Presentation/Controllers/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "32E29BAE-1335-4BFE-A6F5-EBD6901BD54F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pokedex/Home/Presentation/Controllers/HomeController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "getPokemonsByGeneration(generationId:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FB08D702-E250-4F1B-9DC6-9BADC47171B6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pokedex/Home/Presentation/Controllers/HomeController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "getPokemonsByGeneration(generationId:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FB08D702-E250-4F1B-9DC6-9BADC47171B6 - 7727e7dfea813f69"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Pokedex.HomeController.getPokemonsByGeneration(generationId: Swift.Int) async -&gt; ()"
-                  moduleName = "Pokedex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jao/www/swift/Pokedex/Pokedex/Home/Presentation/Controllers/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64">
-               </Location>
-               <Location
-                  uuid = "FB08D702-E250-4F1B-9DC6-9BADC47171B6 - d6b4c0dd9f9e9d68"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for Pokedex.HomeController.getPokemonsByGeneration(generationId: Swift.Int) async -&gt; ()"
-                  moduleName = "Pokedex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jao/www/swift/Pokedex/Pokedex/Home/Presentation/Controllers/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DCA2FAC0-76D2-4152-9A07-615C6C05E82C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pokedex/Pokemon/Data/DataSources/PokemonDataSourceImpl.swift"
@@ -296,64 +192,20 @@
             endingLineNumber = "20"
             landmarkName = "fetchPokemonByGeneration(generationId:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DCA2FAC0-76D2-4152-9A07-615C6C05E82C - 768675806dcecef1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Apollo.GraphQLResult&lt;Pokedex.PokeAPI.GetPokemonsByGenerationQuery.Data&gt;, Swift.Error&gt;) -&gt; () in closure #1 (Swift.CheckedContinuation&lt;Swift.Array&lt;Pokedex.PokemonEntity&gt;, Swift.Error&gt;) -&gt; () in Pokedex.PokemonDataSourceImpl.fetchPokemonByGeneration(generationId: Swift.Int) async throws -&gt; Swift.Array&lt;Pokedex.PokemonEntity&gt;"
-                  moduleName = "Pokedex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jao/www/swift/Pokedex/Pokedex/Pokemon/Data/DataSources/PokemonDataSourceImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21">
-               </Location>
-               <Location
-                  uuid = "DCA2FAC0-76D2-4152-9A07-615C6C05E82C - 768675806dcecef1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Apollo.GraphQLResult&lt;Pokedex.PokeAPI.GetPokemonsByGenerationQuery.Data&gt;, Swift.Error&gt;) -&gt; () in closure #1 (Swift.CheckedContinuation&lt;Swift.Array&lt;Pokedex.PokemonEntity&gt;, Swift.Error&gt;) -&gt; () in Pokedex.PokemonDataSourceImpl.fetchPokemonByGeneration(generationId: Swift.Int) async throws -&gt; Swift.Array&lt;Pokedex.PokemonEntity&gt;"
-                  moduleName = "Pokedex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jao/www/swift/Pokedex/Pokedex/Pokemon/Data/DataSources/PokemonDataSourceImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21">
-               </Location>
-               <Location
-                  uuid = "DCA2FAC0-76D2-4152-9A07-615C6C05E82C - 768675806dcecef1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Apollo.GraphQLResult&lt;Pokedex.PokeAPI.GetPokemonsByGenerationQuery.Data&gt;, Swift.Error&gt;) -&gt; () in closure #1 (Swift.CheckedContinuation&lt;Swift.Array&lt;Pokedex.PokemonEntity&gt;, Swift.Error&gt;) -&gt; () in Pokedex.PokemonDataSourceImpl.fetchPokemonByGeneration(generationId: Swift.Int) async throws -&gt; Swift.Array&lt;Pokedex.PokemonEntity&gt;"
-                  moduleName = "Pokedex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jao/www/swift/Pokedex/Pokedex/Pokemon/Data/DataSources/PokemonDataSourceImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0D970F1B-337C-4E22-9DA7-3DEDD4D11E35"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pokedex/Pokemon/Data/DataSources/PokemonDataSourceImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "fetchPokemonByGeneration(generationId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -362,14 +214,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DF0A71F3-85BB-44D6-A05B-F7A2AAB5CDEC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pokedex/Home/Presentation/Controllers/HomeController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "getPokemonsByGeneration(generationId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -384,9 +236,185 @@
             filePath = "Pokedex/Home/Presentation/Controllers/HomeController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "getPokemonsByGeneration(generationId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F516C8FE-F188-4982-94E1-027227CABD05"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokedex/Home/Presentation/Controllers/HomeController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "filterPokemons(newParemeters:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08D77B22-8715-4F36-ADC1-38CC6F189133"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokedex/Home/Presentation/Controllers/HomeController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "getPokemonsByGeneration(generationId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDE7C19B-1B2D-454F-B74A-2FC0D0C35A73"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokedex/Home/Presentation/Views/Components/FilterTab.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "984EB809-0E0E-4510-9E4B-3F68091C3830"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokedex/App/Components/PokedexRangeSlider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "sliderView(sliderSize:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87754290-78B7-44BF-9319-FF3D84D8F66A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokedex/App/Components/PokedexRangeSlider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "sliderView(sliderSize:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0D55E56-945A-4FFA-A921-596A0D20EEA5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokedex/App/Components/PokedexRangeSlider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "sliderView(sliderSize:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF3F5D25-44DE-4BC8-AEC5-77D5D0B53B94"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokedex/App/Components/PokedexRangeSlider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "sliderView(sliderSize:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8136DAD0-124C-48D6-AF4C-A57657B46302"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokedex/App/Components/PokedexRangeSlider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "sliderView(sliderSize:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3AD2108-BD3B-4094-8FCA-357229D91B76"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokedex/Home/Presentation/Views/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "202C896A-E884-401F-BED8-8E2904CACA92"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokedex/Pokemon/Data/DataSources/PokemonDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "fetchPokemonByGeneration(generationId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00B50EED-F191-4CA5-AFD5-E37B33BEF560"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokedex/Pokemon/Data/DataSources/PokemonDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "fetchPokemonByGeneration(generationId:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

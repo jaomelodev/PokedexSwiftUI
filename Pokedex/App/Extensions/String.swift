@@ -6,14 +6,6 @@
 //
 
 extension String {
-    func capitalizingFirstLetter() -> String {
-      return prefix(1).uppercased() + self.lowercased().dropFirst()
-    }
-
-    mutating func capitalizeFirstLetter() {
-      self = self.capitalizingFirstLetter()
-    }
-    
     func padStart(toLength length: Int, withPad pad: String = " ") -> String {
         let padCount = length - self.count
         guard padCount > 0 else { return self }

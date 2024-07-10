@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GenerationTab: View {
     @Binding var selectedGeneration: PokemonGeneration
+    @Binding var showBottomSheet: Bool
     
     var body: some View {
         ScrollView {
@@ -39,6 +40,7 @@ struct GenerationTab: View {
                             isSelected: generation == selectedGeneration,
                             changeGeneration: {
                                 selectedGeneration = generation
+                                showBottomSheet = false
                             }
                         )
                     }
@@ -53,10 +55,12 @@ struct GenerationTab: View {
 #Preview {
     struct ContainderView: View {
         @State var selectedGeneration: PokemonGeneration = .I
+        @State var showBottomSheet: Bool = true
         
         var body: some View {
             GenerationTab(
-                selectedGeneration: $selectedGeneration
+                selectedGeneration: $selectedGeneration,
+                showBottomSheet: $showBottomSheet
             )
             .padding()
         }

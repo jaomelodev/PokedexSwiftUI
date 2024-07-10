@@ -18,7 +18,7 @@ struct PokemonListItem: View {
     
     var body: some View {
         NavigationLink {
-            //
+            PokemonPage(pokemon: pokemon)
         } label: {
             ZStack {
                 HStack {
@@ -120,9 +120,20 @@ struct PokemonListItem: View {
         pokemon: PokemonEntity(
             id: 1,
             name: "Bulbassaur",
-            height: 10,
-            weight: 50,
-            types: [.grass, .poison]
+            description: "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.",
+            height: 7,
+            weight: 69,
+            catchRate: 45,
+            baseHappiness: 50,
+            growthRate: "medium-slow",
+            baseExp: 64,
+            genderRate: 6,
+            eggCycles: 20,
+            eggGroups: ["monster", "grass"],
+            types: [.grass, .poison],
+            evolutionChain: [],
+            pokemonStats: [],
+            pokemonAbilities: []
         )
     )
     .padding()

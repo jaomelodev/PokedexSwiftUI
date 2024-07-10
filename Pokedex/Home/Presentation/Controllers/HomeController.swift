@@ -5,7 +5,7 @@
 //  Created by João Melo on 28/05/24.
 //
 
-enum PokemonTab {
+enum PokemonHomeTab {
     case generations
     case sort
     case filter
@@ -18,9 +18,12 @@ class HomeController: ObservableObject {
     
     var pokemonsList: [PokemonEntity] = []
     @Published var pokemonLoading: LoadingState = .success
-    @Published var pokemonsListFiltered: [PokemonEntity] = []
     
-    var currentTab: PokemonTab = .generations
+    var pokemonListFiltered: [PokemonEntity] = []
+    @Published var pokemonsListDisplay: [PokemonEntity] = []
+    
+    
+    var currentTab: PokemonHomeTab = .generations
     
     @Published var selectedGeneration: PokemonGeneration = .I {
         didSet {
@@ -51,14 +54,17 @@ class HomeController: ObservableObject {
         do {
             let pokemons = try await getPokemonsByGenerationUseCase.execute(generationId)
             
-            self.pokemonsList = pokemons
+            pokemonsList = pokemons
+            pokemonListFiltered = pokemons
+            
+            pokemonTextInput = ""
+            
+            selectedSortType = .smallFirst
             
             filterParemeters = FilterParemetersEntity(
                 sliderBounds: (pokemons.first?.id ?? 0)...(pokemons.last?.id ?? 1),
                 sliderCurrentRange: (pokemons.first?.id ?? 0)...(pokemons.last?.id ?? 1)
             )
-            
-            filterPokemonsByName()
             
             pokemonLoading = .success
         } catch {
@@ -68,25 +74,83 @@ class HomeController: ObservableObject {
     
     func filterPokemonsByName() -> Void {
         if pokemonTextInput.count < 3 {
-            self.pokemonsListFiltered = self.pokemonsList
+            pokemonsListDisplay = self.pokemonListFiltered
             return
         }
         
-        let pokemons = self.pokemonsList.filter { $0.name.contains(pokemonTextInput.lowercased()) }
+        let pokemons = self.pokemonListFiltered.filter { $0.name.contains(pokemonTextInput.lowercased()) }
         
-        self.pokemonsListFiltered = pokemons
+        pokemonsListDisplay = pokemons
+        
+        sortPokemons()
     }
     
     func sortPokemons() -> Void {
         switch selectedSortType {
         case .smallFirst:
-            self.pokemonsListFiltered.sort(by: { $0.id < $1.id })
+            pokemonsListDisplay.sort(by: { $0.id < $1.id })
         case .highFirst:
-            self.pokemonsListFiltered.sort(by: { $0.id > $1.id })
+            pokemonsListDisplay.sort(by: { $0.id > $1.id })
         case .aToZ:
-            self.pokemonsListFiltered.sort(by: { $0.name < $1.name })
+            pokemonsListDisplay.sort(by: { $0.name < $1.name })
         case .zToA:
-            self.pokemonsListFiltered.sort(by: { $0.name > $1.name })
+            pokemonsListDisplay.sort(by: { $0.name > $1.name })
         }
+    }
+    
+    func filterPokemons(newParemeters: FilterParemetersEntity) -> Void {
+        filterParemeters = newParemeters
+        
+        let initialIndex = pokemonsList.firstIndex { $0.id == filterParemeters!.sliderCurrentRange.lowerBound }
+        
+        let finalIndex = pokemonsList.firstIndex { $0.id == filterParemeters!.sliderCurrentRange.upperBound }
+        
+        var pokemonsSubList: Array<PokemonEntity>.SubSequence
+        
+        if (initialIndex ?? 0 < finalIndex ?? 0) {
+            pokemonsSubList = pokemonsList[initialIndex!...finalIndex!]
+        } else {
+            pokemonsSubList = pokemonsList[0...pokemonsList.count - 1]
+        }
+        
+        if (!filterParemeters!.selectedHeights.isEmpty) {
+            pokemonsSubList = pokemonsSubList.filter { filterParemeters!.selectedHeights.contains($0.pokemonHeightCategory) }
+        }
+        
+        if (!filterParemeters!.selectedWeights.isEmpty) {
+            pokemonsSubList = pokemonsSubList.filter { filterParemeters!.selectedWeights.contains($0.pokemonWeightCategory) }
+        }
+        
+        if !filterParemeters!.selectedTypes.isEmpty {
+            pokemonsSubList = pokemonsSubList.filter { pokemon in
+                pokemon.types.contains { filterParemeters!.selectedTypes.contains($0) }
+            }
+        }
+        
+        if (!filterParemeters!.selectedWeaknesses.isEmpty) {
+            pokemonsSubList = pokemonsSubList.filter { pokemon in
+                for weakness in newParemeters.selectedWeaknesses {
+                    if let damageRelation = pokemon.pokemonDamageRelation[weakness] {
+                        if damageRelation >= 2 {
+                            return true
+                        }
+                    }
+                }
+                
+                return false
+            }
+        }
+        
+        pokemonListFiltered = Array(pokemonsSubList)
+        
+        filterPokemonsByName()
+    }
+    
+    func resetFilters() -> Void {
+        filterParemeters?.resetFilters()
+        
+        pokemonListFiltered = pokemonsList
+        
+        filterPokemonsByName()
     }
 }

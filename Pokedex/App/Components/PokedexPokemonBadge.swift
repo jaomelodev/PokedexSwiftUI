@@ -9,10 +9,21 @@ import SwiftUI
 
 struct PokedexPokemonBadge: View {
     let pokemonType: PokemonType
+    let showLabel: Bool
+    
+    init(pokemonType: PokemonType) {
+        self.pokemonType = pokemonType
+        self.showLabel = true
+    }
+    
+    init(pokemonType: PokemonType, showLabel: Bool) {
+        self.pokemonType = pokemonType
+        self.showLabel = showLabel
+    }
     
     var color: Color { getPokemonColor(pokemonType) }
     var typeName: String {
-        pokemonType.rawValue.capitalizingFirstLetter()
+        pokemonType.rawValue.capitalized
     }
     
     var body: some View {
@@ -22,8 +33,10 @@ struct PokedexPokemonBadge: View {
                 .scaledToFit()
                 .frame(width: 15, height: 15)
             
-            Text(typeName)
-                .font(TextStyles.pokemonType)
+            if showLabel {
+                Text(typeName)
+                    .font(TextStyles.pokemonType)
+            }
         }
         .foregroundColor(.white)
         .padding(5)
@@ -33,7 +46,13 @@ struct PokedexPokemonBadge: View {
 }
 
 #Preview {
-    PokedexPokemonBadge(
-        pokemonType: .dark
-    )
+    VStack {
+        PokedexPokemonBadge(
+            pokemonType: .dark
+        )
+        PokedexPokemonBadge(
+            pokemonType: .bug,
+            showLabel: false
+        )
+    }
 }

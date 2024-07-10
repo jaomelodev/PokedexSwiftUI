@@ -20,7 +20,7 @@ struct PokedexButton: View {
             }
         } label: {
             Text(buttonLable)
-                .font(TextStyles.description)
+                .font(TextStyles.filterTitle)
                 .frame(maxWidth: .infinity, maxHeight: 60)
                 .frame(height: 60)
         }

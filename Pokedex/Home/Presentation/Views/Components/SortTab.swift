@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SortTab: View {
     @Binding var selectedSortType: SortType
+    @Binding var showBottomSheet: Bool
     
     var body: some View {
         ScrollView {
@@ -27,6 +28,7 @@ struct SortTab: View {
                         primaryButton: selectedSortType == sortType,
                         action: {
                             selectedSortType = sortType
+                            showBottomSheet = false
                         }
                     )
                 }
@@ -41,10 +43,12 @@ struct SortTab: View {
 #Preview {
     struct ContainderView: View {
         @State var selectedSortType: SortType = .smallFirst
+        @State var showBottomSheet: Bool = true
         
         var body: some View {
             SortTab(
-                selectedSortType: $selectedSortType
+                selectedSortType: $selectedSortType,
+                showBottomSheet: $showBottomSheet
             )
         }
     }

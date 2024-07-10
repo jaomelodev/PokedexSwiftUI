@@ -14,7 +14,7 @@ struct PokedexIconButton: View {
     let action: () -> Void
     
     init(pokemonType: PokemonType, active: Bool, action: @escaping () -> Void) {
-        self.icon = "Icon\(pokemonType.rawValue.capitalizingFirstLetter())"
+        self.icon = "Icon\(pokemonType.rawValue.capitalized)"
         self.color = getPokemonColor(pokemonType)
         self.active = active
         self.action = action

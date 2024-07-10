@@ -2,16 +2,52 @@
 query GetPokemonsByGeneration($generationId: Int!) {
   pokemon_v2_generation_by_pk(id: $generationId) {
     pokemon_v2_pokemonspecies(order_by: {id: asc}) {
-      name
       id
+      name
+      gender_rate
+      hatch_counter
+      capture_rate
+      base_happiness
+      pokemon_v2_growthrate {
+        name
+      }
       pokemon_v2_pokemons {
         height
         weight
+        base_experience
         pokemon_v2_pokemontypes {
           pokemon_v2_type {
             name
           }
         }
+        pokemon_v2_pokemonstats {
+          base_stat
+          effort
+          pokemon_v2_stat {
+            name
+          }
+        }
+        pokemon_v2_encounters {
+          location_area_id
+          pokemon_v2_version {
+            name
+            version_group_id
+          }
+        }
+        pokemon_v2_pokemonabilities {
+          is_hidden
+          pokemon_v2_ability {
+            name
+          }
+        }
+      }
+      pokemon_v2_pokemonegggroups {
+        pokemon_v2_egggroup {
+          name
+        }
+      }
+      pokemon_v2_pokemonspeciesflavortexts(where: {pokemon_v2_language: {name: {_eq: "en"}}}, limit: 1, order_by: {id: desc}) {
+        flavor_text
       }
       pokemon_v2_evolutionchain {
         pokemon_v2_pokemonspecies {
